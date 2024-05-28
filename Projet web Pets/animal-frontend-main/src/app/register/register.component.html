@@ -1,0 +1,119 @@
+<body class="bodyStyle">
+<div style="padding: 200 px;margin-top: 10%;">
+  <div class="form-container mat-elevation-z5 margin-top margin-bottom">
+    <h1 class="justify center">Register</h1>
+    <mat-tab-group selectedIndex="1">
+      <mat-tab label="Veterinary">
+        <form [formGroup]="vetRegisterForm" (ngSubmit)="clientSubmit()">
+          <mat-form-field>
+            <input matInput placeholder="Full Name" formControlName="fullName" name="name" class="inputstyle" />
+            <mat-error *ngIf="clientFullName?.errors?.['required']">
+              Full Name is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Email address" formControlName="email" name="email" class="inputstyle" />
+            <mat-error *ngIf="clientEmail?.errors?.['required']">
+              Email address is required
+            </mat-error>
+            <mat-error *ngIf="clientEmail?.errors?.['email']">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Practice address"  name="address" class="inputstyle" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Phone number"  name="phone" class="inputstyle" />
+          </mat-form-field>
+
+
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password" class="inputstyle" />
+            <mat-error *ngIf="clientPassword?.errors?.['required']">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+
+          <div class="center margin-top">
+            <button type="submit" mat-raised-button color="primary">Register</button>
+          </div>
+        </form>
+      </mat-tab>
+
+      <mat-tab label="Client">
+        <form [formGroup]="clientRegisterForm" (ngSubmit)="clientSubmit()">
+          <mat-form-field>
+            <input matInput placeholder="Full Name" formControlName="fullName" name="name" class="inputstyle" />
+            <mat-error *ngIf="clientFullName?.errors?.['required']">
+              Full Name is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Email address" formControlName="email" name="email" class="inputstyle" />
+            <mat-error *ngIf="clientEmail?.errors?.['required']">
+              Email address is required
+            </mat-error>
+            <mat-error *ngIf="clientEmail?.errors?.['email']">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="address" name="address" class="inputstyle" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Phone number" formControlName="phone" name="phone" class="inputstyle" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password" class="inputstyle" />
+            <mat-error *ngIf="clientPassword?.errors?.['required']">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+          <p class="text-danger text-center" *ngIf="registerError">Register Error</p>
+
+          <div class="center margin-top">
+            <button type="submit" mat-raised-button color="primary">Register</button>
+          </div>
+        </form>
+      </mat-tab>
+
+      <mat-tab label="Products provider">
+        <form [formGroup]="ppRegisterForm" (ngSubmit)="clientSubmit()">
+          <mat-form-field>
+            <input matInput placeholder="Full Name" formControlName="fullName" name="name" class="inputstyle" />
+            <mat-error *ngIf="clientFullName?.errors?.['required']">
+              Full Name is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Email address" formControlName="email" name="email" class="inputstyle" />
+            <mat-error *ngIf="clientEmail?.errors?.['required']">
+              Email address is required
+            </mat-error>
+            <mat-error *ngIf="clientEmail?.errors?.['email']">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Address"  name="address" class="inputstyle" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Phone number"  name="phone" class="inputstyle" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password" class="inputstyle" />
+            <mat-error *ngIf="clientPassword?.errors?.['required']">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+
+          <div class="center margin-top">
+            <button type="submit" mat-raised-button color="primary">Register</button>
+          </div>
+        </form>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+</body>

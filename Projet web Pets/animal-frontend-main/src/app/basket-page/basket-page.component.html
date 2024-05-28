@@ -1,0 +1,37 @@
+<div class="container">
+  <a routerLink="/store" type="button" mat-raised-button color="primary" class="mt-2">Go back to Store</a>
+  <h1 class="my-2">{{products.length}} items in cart</h1>
+  <mat-list>
+    <span *ngFor="let product of products">
+      <mat-divider></mat-divider>
+      <mat-list-item style="height: fit-content;">
+        <div class="row">
+          <div class="col-2 d-flex" style="padding: 5px;">
+            <img [src]="product.img" style="height: 100px;" class="mx-auto">
+          </div>
+          <div class="col">
+            <div class="row"><p>{{product.name}}</p></div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field style="width:80px;">
+                  <input matInput type="number" disabled="" [value]="quantities[products.indexOf(product)]" style="text-align: center;">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <h1 class="text-danger">{{totalPrice[products.indexOf(product)]}} DT</h1>
+              </div>
+              <div class="col">
+                <button matSuffix mat-icon-button color="primary" (click)="removeFromBasket(product.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </mat-list-item>
+    </span>
+
+
+  </mat-list>
+</div>

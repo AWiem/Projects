@@ -1,0 +1,237 @@
+.grass {
+  background-image: url(https://d25ynr0tqe9wpe.cloudfront.net/assets/globals/layout/grass-96681cd5b1335d2aff44345e5c1130f3a96e0613101557c6097ec2de8a737a9d.svg);
+  background-repeat: repeat-x;
+  background-position-y: 2px;
+  background-size: cover;
+  height: 35px
+}
+
+.social-links {
+  width: 100%;
+  height: 55px;
+  background-color: #00c78c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.social-links>a {
+  width: 25px;
+  height: 25px;
+  font-family: var(--fa-family);
+  font-size: 30px;
+  line-height: 1.1;
+  text-align: center;
+  margin: 10px 15px 20px 15px;
+  color: #fff
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: #425168;
+  display: flex;
+  position: relative;
+  flex-direction: column
+}
+
+.footer:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.06;
+  background-image: url(https://d25ynr0tqe9wpe.cloudfront.net/assets/globals/layout/pattern-footer-7d78b94cc1c3def1c3db42045b906e60f0e07c003778aa1533613858fff889b1.svg);
+  background-repeat: repeat
+}
+
+.footer__columns {
+  width: 100%;
+  max-width: var(--site-width);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  box-sizing: border-box
+}
+
+@media screen and (max-width: 700px) {
+  .footer__columns {
+    flex-wrap: wrap
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__columns {
+    flex-direction: column
+  }
+}
+
+.footer__column {
+  font-size: 14px;
+  font-weight: normal
+}
+
+.footer__column_need-help {
+  width: 20%
+}
+
+.footer__column_about,
+.footer__column_learn-more,
+.footer__column_top-locations {
+  width: 40%
+}
+
+@media screen and (max-width: 900px) {
+  .footer__column {
+    width: 25%
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__column {
+    margin-bottom: 15px;
+    width: 50%;
+    text-align: center
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__column {
+    width: 100%
+  }
+
+  .footer__column:last-child {
+    margin-bottom: 0
+  }
+}
+
+.footer__column h6 {
+  color: #fff;
+  font: inherit;
+  text-transform: uppercase;
+  margin-bottom: 4px
+}
+
+.footer__column ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column
+}
+
+.footer__column ul li {
+  margin: 3px 0;
+  color: rgba(244, 244, 244, 0.6)
+}
+
+.footer__column ul li strong {
+  color: rgba(244, 244, 244, 0.8)
+}
+
+.footer__column ul li a {
+  color: rgba(244, 244, 244, 0.8);
+  font: inherit;
+  line-height: inherit
+}
+
+.footer__column ul li a:hover {
+  color: #00c78c
+}
+
+.footer__column_about ul,
+.footer__column_learn-more ul,
+.footer__column_top-locations ul {
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.footer__column_about ul li,
+.footer__column_learn-more ul li,
+.footer__column_top-locations ul li {
+  width: 50%
+}
+
+@media screen and (max-width: 900px) {
+
+  .footer__column_about ul,
+  .footer__column_learn-more ul,
+  .footer__column_top-locations ul {
+    flex-direction: column;
+    flex-wrap: nowrap
+  }
+
+  .footer__column_about ul li,
+  .footer__column_learn-more ul li,
+  .footer__column_top-locations ul li {
+    width: 100%
+  }
+}
+
+.footer__copyright-separator {
+  height: 0;
+  opacity: 0.3;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  width: 100%
+}
+
+.footer__copyright {
+  width: 100%;
+  background: none;
+  margin: 0
+}
+
+.footer__copyright>p {
+  background: none;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  vertical-align: middle;
+  text-align: center;
+  color: rgba(244, 244, 244, 0.6);
+  padding: 10px 0
+}
+
+@media only screen and (min-width: 767px) and (max-width: 900px) {
+  .signedin footer {
+    height: 150px
+  }
+
+  .grass {
+    background-size: contain;
+    background-position-y: 1px
+  }
+
+  .footer__copyright {
+    margin: auto
+  }
+
+  .footer__copyright>p {
+    font-size: 14px
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .signedin footer {
+    height: 150px
+  }
+
+  .grass {
+    background-size: contain;
+    background-position-y: 1px
+  }
+
+  .footer__copyright {
+    margin: auto
+  }
+
+  .footer__copyright>p {
+    vertical-align: middle;
+    font-size: 14px
+  }
+}

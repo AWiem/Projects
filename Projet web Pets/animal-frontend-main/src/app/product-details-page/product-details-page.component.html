@@ -1,0 +1,33 @@
+<div class="container" *ngIf="product!=null" style="height: calc(100% - 64px);">
+  <a routerLink="/store" type="button" mat-raised-button color="primary" class="mt-2">Go back to Store</a>
+  <div class="row align-items-center" style="height: 100%;">
+    <div class="col-6 border d-flex align-items-center" style="height: 80%;">
+      <div class="mx-auto" >
+        <img [src]="product.img" style="height: 300px; width: auto;">
+      </div>
+
+    </div>
+    <div class="col-6">
+        <div class="container">
+          <h1>{{product.name}}</h1>
+          <p>{{product.description}}</p>
+          <p class="text-danger fs-3">{{product.price}} DT</p>
+          <div class="row">
+            <div>
+              <mat-form-field style="width: 120px;">
+                <button  matPrefix mat-icon-button (click)="quantity=quantity-(quantity>0?1:0)">
+                  <mat-icon>remove</mat-icon>
+                </button>
+                <input matInput type="text" [(ngModel)]="quantity" >
+                <button  matSuffix mat-icon-button (click)="quantity=quantity+1">
+                  <mat-icon>add</mat-icon>
+                </button>
+              </mat-form-field>
+              <button class="mx-5" mat-stroked-button color="primary" (click)="this.productsService.addToBasket(product.id,quantity)">Add to basket</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+

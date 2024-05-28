@@ -1,0 +1,30 @@
+<body class="bodyStyle">
+<div style="padding: 200 px;margin-top: 10%;">
+  <div class="form-container mat-elevation-z5 margin-top">
+    <h1 class="justify center">Sign In </h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <mat-form-field>
+        <input matInput placeholder="Email address" formControlName="email" class="inputstyle" />
+        <mat-error *ngIf="email?.errors?.['required']">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password" class="inputstyle" />
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <p class="text-danger text-center" *ngIf="loginError">Login Error</p>
+      <div class="center margin-top">
+        <button type="submit" mat-raised-button color="primary" >Login</button>
+      </div>
+      <span class="margin-top  flex justify-between"><a class="sign-up-link" routerLink="/register">Sign
+          up</a></span>
+    </form>
+  </div>
+</div>
+</body>

@@ -1,0 +1,57 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer opened class="example-sidenav" mode="side">
+    <p>Categories</p>
+        <mat-chip-listbox #selection  class="mat-mdc-chip-set-stacked" (change)="selectCategory(selection.value)">
+          <mat-chip-option *ngFor="let category of categories" [selected]="category.selected" [color]="category.color">
+            {{category.name}}
+          </mat-chip-option>
+        </mat-chip-listbox>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <div class="container">
+      <div>
+        <button type="button" mat-raised-button (click)="drawer.toggle()" color="primary">Toggle Category Bar</button>
+        <a routerLink="/basket" class="mx-5" type="button" mat-raised-button color="primary">Show Basket</a>
+      </div>
+
+      <p class="my-2">
+        Selected category: {{selectedCategory}}
+      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl-4" *ngFor="let product of products">
+            <mat-card class="mb-5">
+
+                <img mat-card-image [src]=product.img alt="Product" style="height: 200px;" class="mx-auto my-4">
+
+              <mat-card-content>
+                <a [routerLink]="['/product',product.id]">{{product.name}}</a>
+                <p>{{product.price}} DT</p>
+              </mat-card-content>
+              <mat-card-actions class="d-flex justify-content-evenly">
+                <div style="position: relative; top:10px">
+                  <mat-form-field style="width: 120px;">
+                    <button  matPrefix mat-icon-button (click)="quantities[products.indexOf(product)]=quantities[products.indexOf(product)]-(quantities[products.indexOf(product)]>0?1:0)">
+                      <mat-icon>remove</mat-icon>
+                    </button>
+                    <input matInput type="text" [(ngModel)]="quantities[products.indexOf(product)]" >
+                    <button  matSuffix mat-icon-button (click)="quantities[products.indexOf(product)]=quantities[products.indexOf(product)]+1">
+                      <mat-icon>add</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <button mat-stroked-button color="primary" (click)="addToBasket(product.id,quantities[products.indexOf(product)])">Add to basket</button>
+                </div>
+
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"> </mat-paginator>
+    </div>
+  </div>
+
+</mat-drawer-container>

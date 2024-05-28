@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Neucha&display=swap');
+
+.example-card {
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+  }
+
+.title_center {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.title{
+  font-family: 'Neucha', cursive;
+  font-weight: 900;
+  padding-bottom: 20px;
+  font-size: 36px;
+  text-align: center;
+  color: #425168;
+}
+
+.mycard-title{
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #425168;
+}
+
+.mycard-content{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #425168;
+}
+
+.first-div{
+  background-image: url('../../assets/background1.png');
+  background-repeat: repeat;
+  background-size: 70%;
+  padding-top: 2%;
+}

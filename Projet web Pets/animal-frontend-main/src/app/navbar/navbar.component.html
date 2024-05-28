@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <a mat-button routerLink="landing"><img src="../../assets/logo.png" style="width: 150px;"></a>
+    <div class="spacer"></div>
+    <a mat-button routerLink="howitworks"> How it works </a>
+    <a mat-button routerLink="veterinary"> Veterinary </a>
+    <a mat-button routerLink="find-a-keeper"> Find a keeper </a>
+    <a mat-button routerLink="adopt"> Adopt </a>
+    <a mat-button routerLink="store">Store </a>
+    <span *ngIf="!authService.loggedIn()">
+      <a mat-raised-button color="primary" routerLink="register" style="margin-left: 4px;">Get started</a>
+      <span class="mstyle"> or </span>
+      <a mat-raised-button color="accent" routerLink="login">Sign in</a>
+    </span>
+    <span *ngIf="authService.loggedIn()">
+      <a mat-raised-button color="accent" routerLink="profile" style="margin-left: 4px; margin-right: 4px;">Profile</a>
+      <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+    </span>
+
+</mat-toolbar>

@@ -1,0 +1,24 @@
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                <!--profile card-->
+                <div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center">
+                    <div class="banner"></div>
+                    <img src="../../assets/avatar.png" alt="pdp" class="img-circle mx-auto mb-3">
+                    <h3 class="mb-4">{{client?client!.fullName:""}}</h3>
+                    <div class="text-left mb-4">
+                        <p class="mb-2"><i class="fa fa-enveloppe mr-2"></i>{{client?client!.email:""}}</p>
+                        <p class="mb-2"><i class="fa fa-phone mr-2"></i>{{client?client!.phone:""}}</p>
+                        <p class="mb-2"><i class="fa fa-map-marker mr-2"></i>{{client?client!.address:""}}</p>
+                        <a mat-raised-button color="primary" (click)="openDialog()">Add pets</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

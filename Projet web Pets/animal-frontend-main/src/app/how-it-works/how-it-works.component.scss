@@ -1,0 +1,84 @@
+.header-div{
+    background-color: rgb(209, 101, 119);
+    height: 30%;
+    text-align: center;
+
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 8%;
+    line-height: 1.5;
+    color: beige;
+    display: inline-block;
+}
+}
+
+.body-div{
+    background-color:#EBF1FA;
+    background-image: url('../../assets/background1.png');
+    background-repeat: repeat;
+    background-size: 65%;
+
+    text-align: center;
+    h1{
+        font-size: 25px;
+        line-height: 1.5;
+        color: rgb(49, 74, 106);
+        display: inline-block;
+        text-align: justify;
+        padding: 5%;
+
+    }
+}
+
+.card {
+    background-color: #b2caef1d;
+    backdrop-filter: blur(32px);
+    border-radius: 50px;
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    border: none;
+    overflow: hidden;
+    margin: 40px;
+    text-align: left;
+
+      h2 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+  }
+  .parent::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(209, 101, 119);
+    color: #fff;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 12%;
+
+  }
+  .content {
+    display: flex;
+    padding: 20px;
+  }
+  .last-div{
+    margin-left:60%;
+  }
+

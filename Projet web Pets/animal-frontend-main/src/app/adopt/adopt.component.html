@@ -1,0 +1,26 @@
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 mt-5" *ngFor="let animal of animalsForAdoption">
+            <!--profile card-->
+            <div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center">
+              <div class="banner"></div>
+
+              <img src="{{animal.img}}" alt="pdp" style="height: 150px; width: auto;" class="img-circle mb-3 mx-auto d-flex">
+
+
+              <h3 class="mb-4">{{animal.petType}}</h3>
+              <div class="text-left mb-4">
+                <p class="mb-2">Sex: {{animal.sex}}</p>
+                <p class="mb-2">Fur Color: {{animal.furColor}}</p>
+                <p class="mb-2">Age: {{animal.age}}</p>
+                <a mat-raised-button color="primary" (click)="openDialog()" >Contact owner</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+</div>
